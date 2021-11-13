@@ -33,7 +33,7 @@
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,16 +42,23 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <title>Document</title>
 </head>
-<body>
-    <div class="container mt-5">
+<body class="bg-dark">
+    <div class="container mt-5 ">
         <div class="row">
             <div class="col-md">
                 <?php foreach($r as $data){?>
                     <div class="alert alert-<?php echo $data['color']?> d-flex justify-content-between">
-                        <?php echo $data['color'] ?>               
-                        <a href="index.php?id=<?php echo $data['id']?>" class="text-black">
-                            <span class="fa fa-edit "></span>  
-                        </a>
+                        <?php echo $data['color'] ?>    
+                        <div>
+                            <a href="index.php?id=<?php echo $data['id']?>" class="text-black">
+                                <span class="fa fa-edit "></span>  
+                            </a>
+                            <a href="eliminar.php?id=<?php echo $data['id']?>" class="text-black">
+                                <span class="fa fa-trash"> </span>
+                                
+                            </a>
+                        </div>           
+                        
                            
                     </div>
                 <?php } ?>
